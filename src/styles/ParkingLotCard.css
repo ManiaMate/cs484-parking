@@ -1,0 +1,52 @@
+.wrapper {
+    margin: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+    border-radius: 1rem;
+    min-width: 28rem;
+    display: flex;
+    margin-left: 7rem;
+    z-index: 1;
+    /* Ensure the card has a lower z-index than the tooltip */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.card__img {
+    width: 14rem;
+    height: 11rem;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+}
+
+.card__body {
+    margin: 1rem;
+}
+
+
+.card__title {
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.card__description {
+    line-height: 5rem;
+}

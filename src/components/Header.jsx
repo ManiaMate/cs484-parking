@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function login() {
+export default function Header() {
   return (
     <div>
       

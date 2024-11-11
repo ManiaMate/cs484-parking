@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Dynamically create and append the Boxicons stylesheet link
+const link = document.createElement('link');
+link.href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css';
+link.rel = 'stylesheet';
+document.head.appendChild(link);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
