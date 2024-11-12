@@ -9,7 +9,8 @@ import Homepage from "./pages/homepage";
 function App() {
   return (
     <div className="App">
-      <Login />
+      {/* <Login /> */}
+      <Homepage />
     </div>
   );
 }
