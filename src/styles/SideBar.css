@@ -4,11 +4,7 @@
     border: 1px solid #eee
 }
 
-.sidebar {
-    text-align: left;
-}
-
-* {
+.sidebar ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,6 +12,7 @@
 }
 
 .sidebar {
+    text-align: left;
     position: absolute;
     top: 0;
     left: 0;
@@ -26,6 +23,8 @@
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease;
     z-index: 10;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .sidebar.active {
