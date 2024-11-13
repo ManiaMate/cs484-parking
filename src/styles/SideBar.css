@@ -4,7 +4,16 @@
     border: 1px solid #eee
 }
 
-.sidebar ul {
+.sidebar {
+    text-align: left;
+}
+
+body,
+h1,
+p,
+.sidebar,
+ul,
+.user-img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
