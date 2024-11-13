@@ -46,6 +46,7 @@
     /* 48px */
     font-weight: 700;
     padding-bottom: 0.625rem;
+    white-space: nowrap;
     /* 10px */
 }
 
