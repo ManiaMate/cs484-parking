@@ -1,10 +1,25 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./../styles/login.css";
 import logo from "./../Cal-Poly-Logo.png";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    if (username && password) {
+      navigate("/homepage")
+    }
+    else {
+      setError("Please enter the correct information.");
+      // Reset the input fields if you want to clear them
+      setUsername("");
+      setPassword("");
+    }
+  }
 
   const handleUsernameFocus = () => {
     if (username === "") {
@@ -26,6 +41,7 @@ function Login() {
           Welcome To Poly Parking
         </div>
         <div className="login-title">Login to your Cal Poly Account</div>
+        {error && <div className="error-message" style={{ color: "red", textAlign: "center" }}>{error}</div>}
         <div className="login-form">
           <div className="input">
             <div className="label-container">
@@ -55,7 +71,7 @@ function Login() {
             </div>
           </div>
           <div className="submit-button">
-            <button type="submit">Login</button>
+            <button type="submit" onClick={handleLogin}>Login</button>
           </div>
         </div>
       </div>

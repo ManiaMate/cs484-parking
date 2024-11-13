@@ -9,7 +9,10 @@ import "./App.css";
 function App() {
   return (  
     <div className="App">
-      <Login />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/homepage" element={<Homepage />} />
+      </Routes>
     </div>
   );
 }
