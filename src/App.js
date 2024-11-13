@@ -4,7 +4,6 @@ import Login from "./pages/login";
 import Homepage from "./pages/homepage";
 import HistoryPage from "./pages/history";
 
-
 import "./App.css";
 
 function App() {

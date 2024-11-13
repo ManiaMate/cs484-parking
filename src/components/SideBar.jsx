@@ -16,15 +16,15 @@ function SideBar() {
     // changes className if user clicks on menu 
     // if true, 'sidebar' -> 'sidebar active'
     <div className={`sidebar ${isActive ? 'active' : ''}`}>
-        <div class ="top">
-            <div class ='logo'>
-                <i class='bx bxs-car'></i>
+        <div className ="top">
+            <div className ='logo'>
+                <i className='bx bxs-car'></i>
                 <span>Poly Parking</span>
             </div>
         </div>
-        <i class="bx bx-menu" id="btn" onClick={toggleSidebar}></i>
-        <div class ="user">
-            <img src={userImage} alt="user" class="user-img"/>
+        <i className="bx bx-menu" id="btn" onClick={toggleSidebar}></i>
+        <div className ="user">
+            <img src={userImage} alt="user" className="user-img"/>
             <div>
                 <p className="bold">Silas Hsu</p>
                 
@@ -34,21 +34,21 @@ function SideBar() {
         <ul>
             <li>
                 <a href="#">
-                    <i class="bx bxs-grid-alt"></i>
+                    <i className="bx bxs-grid-alt"></i>
                     <span className="nav-item">Home</span>
                 </a>
                 <span className="tooltip">Home</span>
             </li>
             <li>
                 <a href="#">
-                    <i class="bx bx-history"></i>
+                    <i className="bx bx-history"></i>
                     <span className="nav-item">History</span>
                 </a>
                 <span className="tooltip">History</span>
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-log-out'></i>
+                    <i className='bx bx-log-out'></i>
                     <span className="nav-item">Logout</span>
                 </a>
                 <span className="tooltip">Logout</span>
