@@ -10,7 +10,7 @@
 
 /* White container for title and form fields */
 .login-container {
-    grid-column: 4 / span 5;
+    grid-column: 4 / span 6;
     display: grid;
     place-items: center;
     background-color: #ffffff;
