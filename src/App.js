@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Homepage from "./pages/homepage";
 import HistoryPage from "./pages/history";
+import AveragePage from "./pages/average";
 
 import "./App.css";
 
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       {/* <Login /> */}
       {/* <Homepage /> */}
-      <HistoryPage/>
+      {/* <HistoryPage/> */}
+      <AveragePage />
     </div>
   );
 }

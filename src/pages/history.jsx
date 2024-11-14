@@ -1,9 +1,5 @@
 import { React, useState } from "react";
 import SideBar from "../components/SideBar";
-import ParkingLotCard from "../components/ParkingLotCard"; // Import the ParkingLotCard component
-import parkinglot1 from "../assets/parkinglot1.jpg";
-import parkinglot2 from "../assets/parkinglot2.jpg";
-import parkinglot3 from "../assets/parkinglot3.jpg";
 
 import "../styles/HistoryPage.css";
 
@@ -69,7 +65,6 @@ return (
 const parkingHistory = [
   {
     lotNumber: "Parking Lot #1",
-    imgSrc: parkinglot1,
     history: [
       {
         time: "6:30 AM - 7:30 AM",
@@ -90,7 +85,6 @@ const parkingHistory = [
   },
   {
     lotNumber: "Parking Lot #2",
-    imgSrc: parkinglot2,
     history: [
       {
         time: "1:00 PM - 2:00 PM",
@@ -106,7 +100,6 @@ const parkingHistory = [
   },
   {
     lotNumber: "Parking Lot #3",
-    imgSrc: parkinglot3,
     history: [
       {
         time: "3:00 PM - 6:00 PM",
