@@ -10,7 +10,6 @@
     box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
     user-select: none;
     width: 200px;
-    /* Fixed width for the dropdown container */
 }
 
 .lot-dropdown .lot-dropdown-btn {
@@ -30,7 +29,6 @@
     background: white;
     box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
     width: 100%;
-    /* Match the button width */
     box-sizing: border-box;
 }
 

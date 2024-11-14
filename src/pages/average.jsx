@@ -11,7 +11,16 @@ function Average() {
   const [selectedLot, setLotSelected] = useState(""); // Store the selected day
   const [showTable, setShowTable] = useState(false); // To show the table after clicking search
   const [tableData, setTableData] = useState([]); // Store table data
-  const [tableHeaders, setTableHeaders] = useState({lot:"", day: "", time: "" }); // Store table headers
+  const [tableHeaders, setTableHeaders] = useState({
+    lot: "",
+    day: "",
+    time: "",
+  }); // Store table headers
+  const [previousSelection, setPreviousSelection] = useState({
+    lot: "",
+    day: "",
+    time: "",
+  }); // Prevents Click Search multiple times to refresh the numbers 
 
   // Function to generate random average open spots between 12 and 20
   const getRandomNumber = () => Math.floor(Math.random() * 9) + 12;
@@ -60,21 +69,38 @@ function Average() {
     return { startHour, endHour };
   };
 
-  // Function to handle search button click
   const handleSearch = () => {
-    if (selectedLot && selectedDay && selectedTime) {
-      const { startHour, endHour } = parseTime(selectedTime);
-      const timeSlots = generateIntervals(startHour, endHour);
-      const data = timeSlots.map((slot) => ({
-        time: slot.time,
-        averageOpenSpots: getRandomNumber(),
-      }));
-
-      setTableData(data);
-      setTableHeaders({lot: selectedLot, day: selectedDay, time: selectedTime }); // Store the selected day and time for headers
+    if (
+      selectedLot === previousSelection.lot &&
+      selectedDay === previousSelection.day &&
+      selectedTime === previousSelection.time
+    ) {
       setShowTable(true);
     } else {
-      alert("Please select both a day and time.");
+      if (selectedLot && selectedDay && selectedTime) {
+        const { startHour, endHour } = parseTime(selectedTime);
+        const timeSlots = generateIntervals(startHour, endHour);
+        const data = timeSlots.map((slot) => ({
+          time: slot.time,
+          averageOpenSpots: getRandomNumber(),
+        }));
+
+        setTableData(data);
+        setTableHeaders({
+          lot: selectedLot,
+          day: selectedDay,
+          time: selectedTime,
+        });
+        setShowTable(true);
+
+        setPreviousSelection({
+          lot: selectedLot,
+          day: selectedDay,
+          time: selectedTime,
+        });
+      } else {
+        alert("Please select both a day and time.");
+      }
     }
   };
 

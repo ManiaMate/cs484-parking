@@ -8,12 +8,14 @@ import AveragePage from "./pages/average";
 import "./App.css";
 
 function App() {
-  return (  
+  return (
     <div className="App">
-      {/* <Login /> */}
-      {/* <Homepage /> */}
-      {/* <HistoryPage/> */}
-      <AveragePage />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/homepage" element={<Homepage />} />
+        <Route path="/history" element={<HistoryPage />} />
+        <Route path="/average" element={<AveragePage />} />
+      </Routes>
     </div>
   );
 }
