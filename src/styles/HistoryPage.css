@@ -36,7 +36,6 @@
 
 .history-content.show {
     display: block;
-
 }
 
 .history-detail {
@@ -45,7 +44,8 @@
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #f9f9f9;}
+    background-color: #f9f9f9;
+}
 
 .history-detail p {
     margin: 0;

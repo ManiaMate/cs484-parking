@@ -1,0 +1,163 @@
+.all-buttons {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.lot-dropdown {
+    position: relative;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    user-select: none;
+    width: 200px;
+}
+
+.lot-dropdown .lot-dropdown-btn {
+    padding: 10px;
+    background: white;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.lot-dropdown .lot-dropdown-content {
+    position: absolute;
+    background: white;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.lot-dropdown .lot-dropdown-content .lot-dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lot-dropdown .lot-dropdown-content .lot-dropdown-item:hover {
+    background: #f4f4f4;
+}
+
+.day-dropdown {
+    position: relative;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    user-select: none;
+    width: 200px;
+    /* Fixed width for the dropdown container */
+}
+
+.day-dropdown .day-dropdown-btn {
+    padding: 10px;
+    background: white;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.day-dropdown .day-dropdown-content {
+    position: absolute;
+    background: white;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    /* Match the button width */
+    box-sizing: border-box;
+}
+
+.day-dropdown .day-dropdown-content .day-dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.day-dropdown .day-dropdown-content .day-dropdown-item:hover {
+    background: #f4f4f4;
+}
+
+.time-dropdown {
+    position: relative;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    user-select: none;
+    width: 200px;
+    /* Fixed width for the dropdown container */
+}
+
+.time-dropdown .time-dropdown-btn {
+    padding: 10px;
+    background: white;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.time-dropdown .time-dropdown-content {
+    position: absolute;
+    background: white;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    /* Match the button width */
+    box-sizing: border-box;
+}
+
+.time-dropdown .time-dropdown-content .time-dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.time-dropdown .time-dropdown-content .time-dropdown-item:hover {
+    background: #f4f4f4;
+}
+
+.search-btn{
+    padding: 10px;
+    color: white;
+    background: #124b35;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    /* Arrange the contents in a column */
+    align-items: center;
+    /* Center the content horizontally */
+    justify-content: center;
+    /* Take up the full height of the viewport */
+    padding: 30px;
+}
+
+.average-table {
+    padding: 10px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.average-table th,
+.average-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.average-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}

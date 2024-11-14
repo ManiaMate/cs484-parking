@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import SideBar from "../components/SideBar";
-import ParkingLotCard from "../components/ParkingLotCard"; // Import the ParkingLotCard component
 import parkinglot1 from "../assets/parkinglot1.jpg";
 import parkinglot2 from "../assets/parkinglot2.jpg";
 import parkinglot3 from "../assets/parkinglot3.jpg";

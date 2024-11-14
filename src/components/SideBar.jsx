@@ -14,51 +14,54 @@ function SideBar() {
     };
 
   return (
-    // changes className if user clicks on menu 
+    // changes className if user clicks on menu
     // if true, 'sidebar' -> 'sidebar active'
-    <div className={`sidebar ${isActive ? 'active' : ''}`}>
-        <div className ="top">
-            <div className ='logo'>
-                <i className='bx bxs-car'></i>
-                <span>Poly Parking</span>
-            </div>
+    <div className={`sidebar ${isActive ? "active" : ""}`}>
+      <div className="top">
+        <div className="logo">
+          <i className="bx bxs-car"></i>
+          <span>Poly Parking</span>
         </div>
-        <i className="bx bx-menu" id="btn" onClick={toggleSidebar}></i>
-        <div className ="user">
-            <img src={userImage} alt="user" className="user-img"/>
-            <div>
-                <p className="bold">Silas Hsu</p>
-                
-                
-            </div>
+      </div>
+      <i className="bx bx-menu" id="btn" onClick={toggleSidebar}></i>
+      <div className="user">
+        <img src={userImage} alt="user" className="user-img" />
+        <div>
+          <p className="bold">Silas Hsu</p>
         </div>
-        <ul>
-            <li>
-                <a onClick={() => navigate('/homepage')}>
-                    <i className="bx bxs-grid-alt"></i>
-                    <span className="nav-item">Home</span>
-                </a>
-                <span className="tooltip">Home</span>
-            </li>
-            <li>
-                <a onClick={() => navigate('/history')}>
-                    <i className="bx bx-history"></i>
-                    <span className="nav-item">History</span>
-                </a>
-                <span className="tooltip">History</span>
-            </li>
-            <li>
-                <a onClick={() => navigate('/')}>
-                    <i className='bx bx-log-out'></i>
-                    <span className="nav-item">Logout</span>
-                </a>
-                <span className="tooltip">Logout</span>
-            </li>
-        </ul>   
+      </div>
+      <ul>
+        <li>
+          <a onClick={() => navigate("/homepage")}>
+            <i className="bx bxs-grid-alt"></i>
+            <span className="nav-item">Home</span>
+          </a>
+          <span className="tooltip">Home</span>
+        </li>
+        <li>
+          <a onClick={() => navigate("/history")}>
+            <i className="bx bx-history"></i>
+            <span className="nav-item">History</span>
+          </a>
+          <span className="tooltip">History</span>
+        </li>
+        <li>
+          <a onClick={() => navigate("/average")}>
+            <i className="bx bx-calculator"></i>
+            <span className="nav-item">Average</span>
+          </a>
+          <span className="tooltip">Average</span>
+        </li>
+        <li>
+          <a onClick={() => navigate("/")}>
+            <i className="bx bx-log-out"></i>
+            <span className="nav-item">Logout</span>
+          </a>
+          <span className="tooltip">Logout</span>
+        </li>
+      </ul>
     </div>
-
-
-  )
+  );
 }
 
 export default SideBar
