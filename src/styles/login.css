@@ -1,5 +1,5 @@
 /* Gray background for the entire page */
-.page {
+.page.login {
     background-color: #dddddb;
     justify-content: center;
     align-items: center;
@@ -27,6 +27,7 @@
 
 .login-container h1 {
     color: #124b35;
+    font-family: "Domine", serif;
     font-size: 40px;;
     /* 48px */
     font-weight: 700;
@@ -37,14 +38,16 @@
 
 .login-container h2 {
     color: #c69214;
-    font-weight: 10;
+    font-family: "Lato", serif;
+    font-weight: 700;
     text-align: center;
 }
 
 
 /* Logo styling */
 .logo {
-    width: 12.5rem;
+    width: 100%;
+    padding-bottom: 20px;
     /* 200px */
     height: auto;
 }

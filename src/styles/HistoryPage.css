@@ -1,12 +1,6 @@
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-    /* Optional: Add some space below the header */
-}
-
 /* Accordion container */
 .accordion {
-    flex-direction: column;
+    grid-column: 1 / span 12;
     align-items: center;
     min-height: 100vh;
     margin-left: 100px;
@@ -15,6 +9,8 @@
 
 /* Title container (for each parking lot) */
 .title {
+    font-family: "Domine", serif;
+    font-weight: bold;
     background: rgb(232, 231, 231);
     margin-bottom: 10px;
     padding: 20px 30px;
@@ -44,6 +40,7 @@
 }
 
 .history-detail {
+    font-family: "Lato", serif;
     padding: 5px ;
     border: 1px solid #ccc;
     padding: 10px;

@@ -4,7 +4,7 @@ import "../styles/global.css";
 import "../styles/page.css";
 import "../styles/login.css";
 import logo from "../assets/Cal-Poly-Logo.png";
-import pic from "../assets/polyparking.png";
+import pic from "../assets/polyparking_new.png";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -37,7 +37,7 @@ function Login() {
   };
 
   return (
-    <main className="page">
+    <main className="page login">
       <div className="login-container">
          <img src={pic} alt="Poly Parking Logo" className="logo" />
          <h1>Welcome To Poly Parking</h1>

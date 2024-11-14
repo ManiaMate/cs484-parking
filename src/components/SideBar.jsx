@@ -3,8 +3,6 @@ import userImage from '../assets/user-img.jpg'
 import { useNavigate } from "react-router-dom";
 import '../styles/SideBar.css'
 
-
-
 function SideBar() {
 
     // keep track of when user click sidebar menu

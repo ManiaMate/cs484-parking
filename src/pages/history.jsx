@@ -5,6 +5,7 @@ import parkinglot1 from "../assets/parkinglot1.jpg";
 import parkinglot2 from "../assets/parkinglot2.jpg";
 import parkinglot3 from "../assets/parkinglot3.jpg";
 
+import "../styles/page.css";
 import "../styles/HistoryPage.css";
 
 function HistoryPage() {
@@ -21,12 +22,13 @@ function HistoryPage() {
 return (
   <div className="history-wrapper">
     <SideBar />
+    <main className="page history">
     <h1 className="header">Parking History</h1>
     <div className="accordion">
       {parkingHistory.map((lot, i) => (
         <div key={i} className="history">
           <div className="title" onClick={() => toggle(i)}>
-            <h2>{lot.lotNumber}</h2>
+            <h2>{lot.date}</h2>
             {/* Toggle symbol for expanded/collapsed state */}
             <span>
               {selected === i ? (
@@ -46,10 +48,10 @@ return (
             {lot.history.map((history, index) => (
               <div key={index} className="history-detail">
                 <p>
-                  <strong>Time:</strong> {history.time}
+                  <strong>Lot:</strong> {history.lotNumber}
                 </p>
                 <p>
-                  <strong>Date:</strong> {history.date}
+                  <strong>Time:</strong> {history.time}
                 </p>
                 <p>
                   <strong>Spot:</strong> {history.spot}
@@ -60,66 +62,63 @@ return (
         </div>
       ))}
     </div>
+    </main>
   </div>
 );
-
-
 }
+
 
 const parkingHistory = [
   {
-    lotNumber: "Parking Lot #1",
-    imgSrc: parkinglot1,
+    date: "November 13, 2024",
     history: [
       {
+        lotNumber: "Parking Lot #3",
+        time: "1:00 PM - 2:00 PM",
+        spot: "F-15",
+      },
+      {
+        lotNumber: "Parking Lot #2",
+        time: "3:00 PM - 4:00 PM",
+        spot: "F-15",
+      }
+    ]
+  },
+  {
+    date: "November 12, 2024",
+    history: [
+      {
+        lotNumber: "Parking Lot #2",
+        time: "8:00 AM - 10:00 AM",
+        spot: "C-10",
+      },
+      {
+        lotNumber: "Parking Lot #1",
+        time: "2:00 PM - 4:00 PM",
+        spot: "D-8",
+      },
+      {
+        lotNumber: "Parking Lot #3",
+        time: "6:00 PM - 8:00 PM",
+        spot: "B-10",
+      }
+    ]
+  },
+  {
+    date: "November 11, 2024",
+    history: [
+      {
+        lotNumber: "Parking Lot #1",
         time: "6:30 AM - 7:30 AM",
-        date: "October 23, 2023",
         spot: "A-33",
       },
       {
-        time: "6:30 AM - 7:30 AM",
-        date: "October 24, 2023",
-        spot: "B-13",
-      },
-      {
-        time: "10:30 PM - 7:30 AM",
-        date: "December 23, 2023",
-        spot: "C-32",
-      },
-    ],
-  },
-  {
-    lotNumber: "Parking Lot #2",
-    imgSrc: parkinglot2,
-    history: [
-      {
-        time: "1:00 PM - 2:00 PM",
-        date: "January 01, 2022",
-        spot: "F-15",
-      },
-      {
-        time: "3:00 PM - 4:00 PM",
-        date: "March 01, 2024",
-        spot: "F-15",
-      },
-    ],
-  },
-  {
-    lotNumber: "Parking Lot #3",
-    imgSrc: parkinglot3,
-    history: [
-      {
-        time: "3:00 PM - 6:00 PM",
-        date: "February 13, 2023",
-        spot: "B-02",
-      },
-      {
-        time: "3:00 PM - 4:00 PM",
-        date: "May 25, 2024",
-        spot: "E-01",
-      },
-    ],
-  },
+        lotNumber: "Parking Lot #1",
+        time: "3:00 PM - 5:00 PM",
+        spot: "B-22",
+      }
+    ]
+  }
 ];
 
 export default HistoryPage;

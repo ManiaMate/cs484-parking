@@ -10,31 +10,17 @@ import ParkingLotCard from '../components/ParkingLotCard';
 
 function Homepage() {
   return (
-    <main class="page">
-    <div className="homepage">
+    <div className="page-with-sidebar-layout">
       <SideBar />
-      <div className="content">        
-        {/* Add Parking Lot Card here */}
-        {/* <ParkingLotCard /> */}
-        <h1 className='header'>Campus Parkings</h1>
-        <ParkingLotCard imgSrc={parkinglot1} 
-          title="Parking Lot #1"
-          description="Open Spaces: 10"
-        />
-
-        <ParkingLotCard imgSrc={parkinglot2}
-          title="Parking Lot #2"
-          description="Open Spaces: 0"
-        />
-
-        <ParkingLotCard imgSrc={parkinglot3}
-          title="Parking Lot #3"
-          description="Open Spaces: 5"
-        />
-            
-      </div>
+      <main className="page homepage">
+        <h1 className="header">Campus Parkings</h1>
+        <div className="content">    
+          <ParkingLotCard imgSrc={parkinglot1} title="Parking Lot #1" description="Open Spaces: 10" />
+          <ParkingLotCard imgSrc={parkinglot2} title="Parking Lot #2" description="Open Spaces: 0" color="red" />
+          <ParkingLotCard imgSrc={parkinglot3} title="Parking Lot #3" description="Open Spaces: 5" />
+        </div> 
+      </main>
     </div>
-    </main>
   );
 }
 
