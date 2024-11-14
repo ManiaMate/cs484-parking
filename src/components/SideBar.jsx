@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import userImage from '../assets/user-img.jpg'
+import { useNavigate } from "react-router-dom";
 import '../styles/SideBar.css'
+
 
 
 function SideBar() {
 
     // keep track of when user click sidebar menu
     const [isActive, setIsActive] = useState(false);
+    const navigate = useNavigate();
 
     const toggleSidebar = () => {
     setIsActive(!isActive);
@@ -33,21 +36,21 @@ function SideBar() {
         </div>
         <ul>
             <li>
-                <a href="#">
+                <a onClick={() => navigate('/homepage')}>
                     <i className="bx bxs-grid-alt"></i>
                     <span className="nav-item">Home</span>
                 </a>
                 <span className="tooltip">Home</span>
             </li>
             <li>
-                <a href="#">
+                <a onClick={() => navigate('/history')}>
                     <i className="bx bx-history"></i>
                     <span className="nav-item">History</span>
                 </a>
                 <span className="tooltip">History</span>
             </li>
             <li>
-                <a href="#">
+                <a onClick={() => navigate('/')}>
                     <i className='bx bx-log-out'></i>
                     <span className="nav-item">Logout</span>
                 </a>

@@ -1,0 +1,7 @@
+.page {
+    --page-grids: 12;
+  
+    display: grid;
+    grid-template-columns: [start] repeat(var(--page-grids), 1fr) [end];    
+    gap: var(--size-spacing-small) var(--size-spacing-small);
+}

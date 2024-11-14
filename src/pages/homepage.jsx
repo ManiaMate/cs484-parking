@@ -4,11 +4,13 @@ import parkinglot1 from '../assets/parkinglot1.jpg';
 import parkinglot2 from '../assets/parkinglot2.jpg';
 import parkinglot3 from '../assets/parkinglot3.jpg';
 
+import "../styles/page.css"
 import '../styles/Homepage.css';
 import ParkingLotCard from '../components/ParkingLotCard';
 
 function Homepage() {
   return (
+    <main class="page">
     <div className="homepage">
       <SideBar />
       <div className="content">        
@@ -32,6 +34,7 @@ function Homepage() {
             
       </div>
     </div>
+    </main>
   );
 }
 

@@ -9,12 +9,10 @@ import "./App.css";
 function App() {
   return (  
     <div className="App">
-      {/*<Login />*/}
-      {/* <Homepage /> */}
-      <HistoryPage/>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/homepage" element={<Homepage />} />
+        <Route path="/history" element={<HistoryPage />} />
       </Routes>
     </div>
   );

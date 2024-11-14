@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./../styles/login.css";
-import logo from "./../Cal-Poly-Logo.png";
+import "../styles/global.css";
+import "../styles/page.css";
+import "../styles/login.css";
+import logo from "../assets/Cal-Poly-Logo.png";
+import pic from "../assets/polyparking.png";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -34,20 +37,15 @@ function Login() {
   };
 
   return (
-    <div className="login-page">
+    <main className="page">
       <div className="login-container">
-        <div className="login-header">
-          <img src={logo} alt="Poly Parking Logo" className="logo" />
-          Welcome To Poly Parking
-        </div>
-        <div className="login-title">Login to your Cal Poly Account</div>
+         <img src={pic} alt="Poly Parking Logo" className="logo" />
+         <h1>Welcome To Poly Parking</h1>
+         <h2>Login to your Cal Poly Account</h2>
         {error && <div className="error-message" style={{ color: "red", textAlign: "center" }}>{error}</div>}
         <div className="login-form">
-          <div className="input">
-            <div className="label-container">
-              <label>Username:</label>
-            </div>
-            <div className="input-container">
+          <div className="userpassinput">
+            <label>Username:</label>
               <input
                 type="text"
                 value={username}
@@ -55,27 +53,22 @@ function Login() {
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="username@calpoly.edu"
               />
-            </div>
           </div>
-          <div className="input">
-            <div className="label-container">
-              <label>Password:&nbsp;</label>
-            </div>
-            <div className="input-container">
+          <div className="userpassinput">
+            <label>Password:&nbsp;</label>
               <input
                 type="password"
                 value={password}
                 onFocus={handlePasswordFocus}
                 onChange={(e) => setPassword(e.target.value)}
               />
-            </div>
           </div>
           <div className="submit-button">
             <button type="submit" onClick={handleLogin}>Login</button>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
