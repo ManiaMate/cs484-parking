@@ -11,15 +11,15 @@ function ParkingLotPage() {
     { id: 'A-11', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
     { id: 'A-12', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
     { id: 'A-13', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
-    { id: 'A-14', status: 'available', claimed: false, lot: 'Parking Lot # 3'},
+    { id: 'A-14', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
     { id: 'B-11', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
     { id: 'B-12', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
-    { id: 'B-13', status: 'available', claimed: false, lot: 'Parking Lot # 3'},
-    { id: 'B-14', status: 'available', claimed: false, lot: 'Parking Lot # 3'},
+    { id: 'B-13', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
+    { id: 'B-14', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
     { id: 'C-11', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
-    { id: 'C-12', status: 'available', claimed: false, lot: 'Parking Lot # 3'},
-    { id: 'C-13', status: 'available', claimed: false, lot: 'Parking Lot # 3'},
-    { id: 'C-14', status: 'available', claimed: false, lot: 'Parking Lot # 3'},
+    { id: 'C-12', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
+    { id: 'C-13', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
+    { id: 'C-14', status: 'occupied', claimed: false, lot: 'Parking Lot # 3'},
  
   ]);
 

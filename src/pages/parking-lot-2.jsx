@@ -27,10 +27,10 @@ function ParkingLotPage() {
     { id: 'E-12', status: 'available', claimed: false, floor: '2nd Floor', lot: 'Parking Lot # 2' },
     { id: 'E-13', status: 'available', claimed: false, floor: '2nd Floor', lot: 'Parking Lot # 2' },
     { id: 'E-14', status: 'available', claimed: false, floor: '2nd Floor', lot: 'Parking Lot # 2' },
-    { id: 'E-11', status: 'available', claimed: false, floor: '3rd Floor', lot: 'Parking Lot # 2' },
-    { id: 'E-12', status: 'occupied', claimed: false, floor: '3rd Floor', lot: 'Parking Lot # 2' },
-    { id: 'E-13', status: 'occupied', claimed: false, floor: '3rd Floor', lot: 'Parking Lot # 2' },
-    { id: 'E-14', status: 'available', claimed: false, floor: '3rd Floor', lot: 'Parking Lot # 2'},
+    { id: 'F-11', status: 'available', claimed: false, floor: '3rd Floor', lot: 'Parking Lot # 2' },
+    { id: 'F-12', status: 'occupied', claimed: false, floor: '3rd Floor', lot: 'Parking Lot # 2' },
+    { id: 'F-13', status: 'occupied', claimed: false, floor: '3rd Floor', lot: 'Parking Lot # 2' },
+    { id: 'F-14', status: 'available', claimed: false, floor: '3rd Floor', lot: 'Parking Lot # 2'},
   ]);
 
 

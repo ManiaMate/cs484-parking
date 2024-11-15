@@ -122,7 +122,6 @@ ul,
 .sidebar ul li a:hover {
     background-color: white;
     color: black;
-    min-width: 50px;
 }
 
 .sidebar ul li a i {

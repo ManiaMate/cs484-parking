@@ -26,7 +26,7 @@ function Login() {
 
   const handleUsernameFocus = () => {
     if (username === "") {
-      setUsername("example@calpoly.edu");
+      setUsername("shsu@calpoly.edu");
     }
   };
 

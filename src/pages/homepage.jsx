@@ -15,9 +15,9 @@ function Homepage() {
       <main className="page homepage">
         <h1 className="header">Campus Parkings</h1>
         <div className="content">    
-          <ParkingLotCard imgSrc={parkinglot1} title="Parking Lot #1" description="Open Spaces: 10" />
-          <ParkingLotCard imgSrc={parkinglot2} title="Parking Lot #2" description="Open Spaces: 0" color="red" />
-          <ParkingLotCard imgSrc={parkinglot3} title="Parking Lot #3" description="Open Spaces: 5" />
+          <ParkingLotCard imgSrc={parkinglot1} title="Parking Lot #1" description="Open Spaces: 5" link="/parkingone" />
+          <ParkingLotCard imgSrc={parkinglot2} title="Parking Lot #2" description="Open Spaces: 11" link="/parkingtwo" />
+          <ParkingLotCard imgSrc={parkinglot3} title="Parking Lot #3" description="Open Spaces: 0" color="red" link="/parkingthree" />
         </div> 
       </main>
     </div>

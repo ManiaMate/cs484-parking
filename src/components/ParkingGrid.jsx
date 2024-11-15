@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/ParkingGrid.css';
 import CarImg from '../assets/white_car.png';
 import { FaTimesCircle } from 'react-icons/fa'; 
+import { useNavigate } from "react-router-dom";
 
 
 function ParkingGrid({ parkingSpots, onSpotSelect, floors, onUnreserve }) {
@@ -12,15 +13,17 @@ function ParkingGrid({ parkingSpots, onSpotSelect, floors, onUnreserve }) {
     console.log(spotId);
   };
 
+  const navigate = useNavigate();
+
   return (
-    <div className="parking-grid-container">
+    <main className="page parking">
       <div className="back-arrow">
-        <a href="#">
+        <a onClick={() => navigate("/homepage")}>
           <i className='bx bx-left-arrow-circle'></i>
         </a>
       </div>
 
-      <h2 className="title">Choose Spot</h2>
+      <h1 className="header">Choose Spot</h1>
       
       {/* Conditionally render floor selector if floors exist */}
       {floors && floors.length > 0 && (
@@ -71,7 +74,7 @@ function ParkingGrid({ parkingSpots, onSpotSelect, floors, onUnreserve }) {
             </div>
           ))}
       </div>
-    </div>
+    </main>
   );
 }
 
