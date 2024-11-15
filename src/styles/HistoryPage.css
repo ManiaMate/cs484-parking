@@ -1,0 +1,54 @@
+/* Accordion container */
+.accordion {
+    grid-column: 1 / span 12;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+/* Title container (for each parking lot) */
+.title {
+    font-family: "Domine", serif;
+    font-weight: bold;
+    background: rgb(232, 231, 231);
+    margin-bottom: 10px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Arrow icon (for toggling) */
+.title span {
+    font-size: 24px;
+    /* Adjust size of the arrow */
+    display: flex;
+    align-items: center;
+    /* Vertically align the arrow with the title */
+}
+
+/* Accordion content */
+.history-content {
+    display: none;
+}
+
+.history-content.show {
+    display: block;
+}
+
+.history-detail {
+    font-family: "Lato", serif;
+    padding: 5px ;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.history-detail p {
+    margin: 0;
+    padding: 5px;
+    
+}

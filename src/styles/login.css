@@ -1,7 +1,6 @@
 /* Gray background for the entire page */
-.login-page {
+.page.login {
     background-color: #dddddb;
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -11,8 +10,9 @@
 
 /* White container for title and form fields */
 .login-container {
-    display: flex;
-    flex-direction: column;
+    grid-column: 4 / span 6;
+    display: grid;
+    place-items: center;
     background-color: #ffffff;
     padding: 1.875rem;
     /* 30px */
@@ -21,52 +21,44 @@
     box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
     /* 4px 10px */
     width: 100%;
-    max-width: 37.5rem;
     /* 600px */
     margin: auto;
 }
 
+.login-container h1 {
+    color: #124b35;
+    font-family: "Domine", serif;
+    font-size: 40px;;
+    /* 48px */
+    font-weight: 700;
+    padding-bottom: 5px;
+    /* 10px */
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #c69214;
+    font-family: "Lato", serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+
 /* Logo styling */
 .logo {
-    width: 12.5rem;
+    width: 100%;
+    padding-bottom: 20px;
     /* 200px */
     height: auto;
 }
 
-/* Header styling */
-.login-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5625rem;
-    /* 9px */
-    width: 100%;
-    color: #124b35;
-    font-size: 3rem;
-    /* 48px */
-    font-weight: 700;
-    padding-bottom: 0.625rem;
-    white-space: nowrap;
-    /* 10px */
-}
-
-/* Title styling */
-.login-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5625rem;
-    /* 9px */
-    width: 100%;
-    color: #c69214;
-    font-size: 1.5rem;
-    /* 24px */
-}
 
 /* Form styling */
 .login-form {
+    align-items: center;
     margin-top: 1.875rem;
     /* 30px */
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5625rem;
@@ -74,37 +66,30 @@
 }
 
 /* Input container with label and input side by side */
-.input {
+.userpassinput {
     display: flex;
     align-items: center;
-    margin-left: 1.5625rem;
-    /* 25px */
     border-radius: 0.375rem;
-    /* 6px */
     padding: 0.625rem;
-    /* 10px */
+    width: 100%;
 }
 
 /* Label styling */
-.input label {
+.userpassinput label {
     color: #333;
-    margin-right: 1.25rem;
-    /* 20px */
+    margin-right: 1rem; /* Adjust spacing between label and input */
     font-weight: bold;
+    flex-shrink: 0;
+    
 }
 
 /* Styling for input fields */
-.input input {
+.userpassinput input {
     padding: 0.625rem;
-    /* 10px */
-    width: 220%;
-    /* Ensure the input takes full available space */
+    width: 100%; /* Take up full space in the container */
     border: 0.0625rem solid #c69214;
-    /* 1px solid */
     border-radius: 0.25rem;
-    /* 4px */
     font-size: 1rem;
-    /* 16px */
     background-color: white;
 }
 
@@ -128,8 +113,6 @@
     font-size: 1rem;
     /* 16px */
     cursor: pointer;
-    width: 50%;
-    /* Make the button responsive */
 }
 
 /* Button hover effect */
@@ -140,12 +123,6 @@
 /* Mobile responsiveness */
 @media (max-width: 600px) {
 
-    /* Adjust the container width to fit mobile screens */
-    .login-container {
-        width: 100%;
-        max-width: 100%;
-        padding: 1rem;
-    }
 
     /* Resize logo for smaller screens */
     .logo {

@@ -4,50 +4,75 @@
     gap: 1rem;
     grid-template-columns: 1fr;
     justify-content: center;
-}
+  }
 
-.card-link {
-    text-decoration: none;
-    color: inherit;
-
-}
-
-.card {
+  .card {
+    display: flex;
+    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Softer shadow */
     border-radius: 1rem;
     min-width: 28rem;
-    display: flex;
-    margin-left: 7rem;
-    z-index: 1;
-    /* Ensure the card has a lower z-index than the tooltip */
-}
+    padding-right: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+  }
 
-.card:hover {
+  .card__strip {
+  position: absolute; /* Absolute positioning */
+  left: 0;
+  top: 0;
+  bottom: 0; /* Ensures it stretches to the full height */
+  width: 12px; /* Adjust the width of the green section */
+  background-color: #4CAF50; /* Set the desired green color */
+  border-radius: 1rem 0 0 1rem; /* Rounded corners on the left */
+  }
+  
+  
+  .card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-
-.card__img {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .card__img {
     width: 14rem;
     height: 11rem;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1rem 0 0 1rem;
     object-fit: cover;
-}
-
-.card__body {
-    margin: 1rem;
-}
-
-
-.card__title {
+    margin-left: 30px; /* Creates space to the right of the green strip */
+  }
+  
+  .card__body {
+    flex-grow: 1;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card__title {
+    font-family: "Domine", serif;
+    font-weight: bold;
     line-height: 1.4rem;
-    margin-top: 0rem;
-}
-
-.card__description {
-    line-height: 3.5rem;
-    text-align: center;
-}
+    margin-top: 0;
+  }
+  
+  .card__description {
+    font-family: "Lato", serif;
+    line-height: 1.5rem;
+    text-align: left;
+  }
+  
+  .card-arrow {
+    font-size: 2.5rem;
+    color: #888;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
