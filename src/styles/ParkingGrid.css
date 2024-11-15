@@ -1,0 +1,164 @@
+/* Container styling */
+.parking-grid-container {
+    text-align: center;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.parking-grid-container .back-arrow i {
+    color: black;
+    float: left;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+.title {
+    position: relative;
+    left: -3%;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.floor-selector {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 0.5rem;
+    border: 2px solid #333;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+/* Grid layout styling */
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns with equal width */
+    gap: 0.5rem;
+    /* Space between cells */
+    margin-top: 1rem;
+}
+
+/* Parking spot styling */
+.parking-spot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px dashed #ddd;
+    border-right: 1px dashed #ddd;
+    padding: 1rem 0;
+    height: 150px;
+}
+
+
+.parking-spot:nth-child(-n+4) {
+    /* First row */
+    border-top: none;
+}
+
+.parking-spot:not(:nth-child(-n+4)) {
+    border-top: 1px dashed #ddd;
+}
+
+.parking-spot.occupied .spot-id {
+    background-color: #f5f5f5;
+
+}
+
+.parking-spot.available .spot-id {
+    position: relative;
+    top: -23%
+}
+
+.parking-spot.available:hover {
+    cursor: pointer;
+    background-color: #b2ebf2;
+    border-radius: 0.5rem;
+}
+
+.car-icon {
+    position: relative;
+    width: 5rem;
+    height: auto;
+    top: 20%;
+}
+
+.spot-id {
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 0.2rem 0.6rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    color: #333;
+    margin-top: -15%;
+
+}
+
+.available-text {
+    font-size: 0.9rem;
+    color: #00796b;
+    margin-top: 0.5rem;
+}
+
+.parking-spot.claimed {
+    background-color: #d4edda;
+    /* border-top: 1px dashed #ddd; */
+    border: 0.5px dashed #4CAF50;
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.parking-spot.claimed .reserved-user {
+    position: absolute;
+    color: black;
+    padding: 4px 8px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.reserved-user {
+    position: relative;
+    top: 0%;
+}
+
+.reserved-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.unclaim-button {
+    position: relative;
+    bottom: -100%;
+    display: flex;
+    align-items: center;
+    background-color: #ffebee;
+    border: 0.1rem solid #d32f2f;
+    color: #d32f2f;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.85rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.unclaim-button:hover {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+.unclaim-icon {
+    margin-right: 0.3rem;
+    font-size: 1.2rem;
+}
