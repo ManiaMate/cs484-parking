@@ -1,5 +1,7 @@
 # Poly Parking Website
 
+A website that allows Cal Poly students with parking passes to reserve parking spots on campus without any hassle or trouble.
+
 1. To get started, Install __Node.js__ LTS in (`https://nodejs.org/en`)
 2. Verify npm commands can be run in your terminal via
    ```bash
